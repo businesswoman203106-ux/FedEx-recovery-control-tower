@@ -32,16 +32,22 @@ def calculate_risk(days_due, amount):
         return "HIGH"
     return "LOW"
 
-### 2. Trust Scoring
-```python
+### 2.Trust Scoring
+'''python
 def calculate_trust(success_rate):
     if success_rate > 80:
         return "HIGH"
     return "LOW"
 
 ### 3.Smart Allocation
-```python
+'''python
 def allocate_case(account_risk, dca_trust):
     if account_risk == "HIGH" and dca_trust == "HIGH":
         return "Assign to Tier-1 DCA"
     return "Assign to Standard DCA"
+## Sample Output
+FedEx Recovery Control Tower
+Account Status: High Risk
+Assigned DCA: Tier-1
+SLA Status: On Track
+
