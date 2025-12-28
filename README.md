@@ -78,6 +78,11 @@ if __name__ == "__main__":
     print(f"Account Status: {risk} Risk")
     print(f"Assigned DCA: {allocation}")
     print("SLA Status: On Track")
+----- Sample Output -----
+FedEx Recovery Control Tower
+Account Status: HIGH Risk
+Assigned DCA: Assign to Tier-1 DCA
+SLA Status: On Track
 
     
 
