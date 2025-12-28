@@ -31,7 +31,6 @@ AI-assisted risk evaluation and DCA trust assessment work together to ensure **e
 def calculate_risk(days_due, amount):
     """
     Determines the risk level of an overdue account
-    based on overdue days and outstanding amount.
     """
     if days_due > 60 or amount > 50000:
         return "HIGH"
@@ -43,8 +42,7 @@ def calculate_risk(days_due, amount):
 # -------------------------------
 def calculate_trust(success_rate):
     """
-    Calculates the trust level of a DCA
-    using historical recovery success rate.
+    Calculates trust level of a DCA
     """
     if success_rate > 80:
         return "HIGH"
@@ -56,11 +54,33 @@ def calculate_trust(success_rate):
 # -------------------------------
 def allocate_case(account_risk, dca_trust):
     """
-    Assigns the case to the appropriate DCA tier
-    based on account risk and DCA trust score.
+    Allocates case to appropriate DCA tier
     """
     if account_risk == "HIGH" and dca_trust == "HIGH":
         return "Assign to Tier-1 DCA"
     return "Assign to Standard DCA"
 
+
+# -------------------------------
+# Sample Output Display
+# -------------------------------
+if __name__ == "__main__":
+    days_due = 75
+    amount = 60000
+    success_rate = 85
+
+    risk = calculate_risk(days_due, amount)
+    trust = calculate_trust(success_rate)
+    allocation = allocate_case(risk, trust)
+
+    print("----- Sample Output -----")
+    print("FedEx Recovery Control Tower")
+    print(f"Account Status: {risk} Risk")
+    print(f"Assigned DCA: {allocation}")
+    print("SLA Status: On Track")
+
+    
+
+
+    
 
