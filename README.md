@@ -61,9 +61,6 @@ def allocate_case(account_risk, dca_trust):
     return "Assign to Standard DCA"
 
 
-# -------------------------------
-# Sample Output Display
-# -------------------------------
 if __name__ == "__main__":
     days_due = 75
     amount = 60000
@@ -73,11 +70,12 @@ if __name__ == "__main__":
     trust = calculate_trust(success_rate)
     allocation = allocate_case(risk, trust)
 
-    print("----- Sample Output -----")
     print("FedEx Recovery Control Tower")
     print(f"Account Status: {risk} Risk")
     print(f"Assigned DCA: {allocation}")
     print("SLA Status: On Track")
+
+
 ----- Sample Output -----
 FedEx Recovery Control Tower
 Account Status: HIGH Risk
