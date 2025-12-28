@@ -25,29 +25,42 @@ AI-assisted risk evaluation and DCA trust assessment work together to ensure **e
 
 ## Backend Logic Implementation
 
-### 1. Risk Scoring
-```python
+# -------------------------------
+# Risk Scoring
+# -------------------------------
 def calculate_risk(days_due, amount):
+    """
+    Determines the risk level of an overdue account
+    based on overdue days and outstanding amount.
+    """
     if days_due > 60 or amount > 50000:
         return "HIGH"
     return "LOW"
 
-### 2.Trust Scoring
-'''python
+
+# -------------------------------
+# Trust Scoring
+# -------------------------------
 def calculate_trust(success_rate):
+    """
+    Calculates the trust level of a DCA
+    using historical recovery success rate.
+    """
     if success_rate > 80:
         return "HIGH"
     return "LOW"
 
-### 3.Smart Allocation
-'''python
+
+# -------------------------------
+# Smart Allocation
+# -------------------------------
 def allocate_case(account_risk, dca_trust):
+    """
+    Assigns the case to the appropriate DCA tier
+    based on account risk and DCA trust score.
+    """
     if account_risk == "HIGH" and dca_trust == "HIGH":
         return "Assign to Tier-1 DCA"
     return "Assign to Standard DCA"
-## Sample Output
-FedEx Recovery Control Tower
-Account Status: High Risk
-Assigned DCA: Tier-1
-SLA Status: On Track
+
 
