@@ -31,12 +31,16 @@ def calculate_risk(days_due, amount):
     if days_due > 60 or amount > 50000:
         return "HIGH"
     return "LOW"
+
 ### 2. Trust Scoring
+```python
 def calculate_trust(success_rate):
     if success_rate > 80:
         return "HIGH"
     return "LOW"
+
 ### 3.Smart Allocation
+```python
 def allocate_case(account_risk, dca_trust):
     if account_risk == "HIGH" and dca_trust == "HIGH":
         return "Assign to Tier-1 DCA"
